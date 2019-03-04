@@ -73,6 +73,10 @@ if(NOT ANDROID)
                 -DLLVM_TARGETS_TO_BUILD=${LLVM_TARGETS_TO_BUILD}
                 -DLLVM_VERSION=tags/RELEASE_701/final/
                 -DLLVM_VER_DIR=7.0.1
+                -DBUILD_LIBUNWIND=OFF
+                -DBUILD_LLDB=OFF
+                -DBUILD_LIBCXXABI_EXCEPTIONS=OFF
+                -DBUILD_LIBCXXABI_ASSERTIONS=OFF
             INSTALL_COMMAND ${CMAKE_COMMAND} -E copy 
                     ${TOOLCHAIN_DIR}/lib/libc++${CMAKE_SHARED_LIBRARY_SUFFIX}.1.0 
                     ${CMAKE_BINARY_DIR}/target/lib/libc++${CMAKE_SHARED_LIBRARY_SUFFIX}.1 &&
